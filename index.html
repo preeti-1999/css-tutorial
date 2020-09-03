@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+	<div id="head" style="text-align: center;padding: 0 320px;">
+		<h1 style="color: #9615DB; font-size: 60px;"><strong>CSS TUTORIAL</strong></h1>
+		<hr>
+		<hr>
+		<br>
+	</div>
+	<div class="contents">
+		<a href="#one" class="btn">INTRODUCTION</a>
+		<a href="#two" class="btn">ADDING CSS</a>
+		<a href="#three" class="btn">BACKGROUND PROPERTIES</a>
+		<a href="#four" class="btn">BORDER STYLING</a>
+		<a href="#five" class="btn">FONT STYLING</a>
+		<a href="#six" class="btn">MARGIN PROPERTIES</a>
+		<a href="#seven" class="btn">TEXT DECORATION</a>
+		<a href="#eight" class="btn">PADDING</a>
+		<a href="#nine" class="btn">CSS IMPORTANT</a>
+		<a href="#ten" class="btn">ICONS</a>
+		<a href="#assign" class="btn">ASSIGNMENT</a>
+		<a href="#quiz" class="btn">QUIZ</a>
+	</div>
+	
+	<div id="one">
+		<br>
+	  <h2>INTRODUCTION TO CSS</h2>
+		<p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+
+		<p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</p>
+		<h3>Prerequisite:-</h3>
+		<p>Before learning CSS, you must have the basic knowledge of HTML.</p>
+		<h3>CSS Syntax</h3>
+		<p>CSS has a simple syntax and uses a number of English keywords to specify the names of various style properties.A style sheet consists of a list of rules. Each rule or rule-set consists of one or more selectors, and a declaration block.</p>
+		<p>A CSS rule set contains a selector and a declaration block.</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;Selector{Property1: value1; Property2: value2; ..........;} </p>
+		<h4>Example</h4>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;h1{color : yellow; font-size : 11px;}</p>
+		<p><b>Selector:</b> Selector indicates the HTML element you want to style. It could be any tag like &lt;h1&gt;, &lt;title&gt; etc.</p>
+		<p><b>Declaration Block:</b> The declaration block can contain one or more declarations separated by a semicolon. For the above example, there are two declarations:</p>
+		<ol>
+		<li>color: yellow;</li>
+		<li>font-size: 11 px;</li>
+		</ol>
+		<p>Each declaration contains a property name and value, separated by a colon.</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Property:</b> A Property is a type of attribute of HTML element. It could be color, border etc.</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Value:</b> Values are assigned to CSS properties. In the above example, value "yellow" is assigned to color property.</p>
+		<hr>
+		<hr>
+		<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+
+	<div style="height: 80px;"></div>
+
+
+	<div id ="two">
+		<h2>HOW TO ADD CSS?</h2>
+		<p>CSS is added to HTML pages to format the document according to information in the style sheet. There are three ways to insert CSS in HTML documents.</p>
+		<ol>
+			<li>Inline CSS:</li>
+			<li>Internal CSS</li>
+			<li>External CSS</li> 
+		</ol>
+		<hr>
+		<p><b><h3>Inline CSS:</h3></b> Inline CSS is used to apply CSS on a single line or element.We can apply CSS in a single element by inline CSS technique.The inline CSS is also a method to insert style sheets in HTML document. This method mitigates some advantages of style sheets so it is advised to use this method sparingly.</p>
+		<p>If you want to use inline CSS, you should use the style attribute to the relevant tag. </p>
+
+		<p><b>Syntax:</b></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;htmltag style="cssproperty1:value; cssproperty2:value;"&gt; &lt;/htmltag&gt;<p>
+			
+			<p><b>Example:</b></p>
+			<div class="code">
+			<br>
+			&lt;h2 style="color:red;margin-left:40px;"&gt;Inline CSS is applied on this heading.&lt;/h2&gt;<br>&lt;p&gt;This paragraph is not affected.&lt;/p&gt;<br>
+			<br>
+			</div>
+			<p><b>Output:</b></p>
+			<h2 style="color:red;margin-left:40px;">Inline CSS is applied on this heading.</h2>
+			<p>This paragraph is not affected.</p>
+			<br>
+			
+			<h3>Disadvantages of Inline CSS</h3>
+			<ul>
+			<li>You cannot use quotations within inline CSS. If you use quotations the browser will interpret this as an end of your style value. </li>
+			<li>These styles cannot be reused anywhere else.</li>
+			<li>These styles are tough to be edited because they are not stored at a single place.</li>
+			<li>It is not possible to style pseudo-codes and pseudo-classes with inline CSS. </li>
+			<li>Inline CSS does not provide browser cache advantages. </li>
+			</ul>
+		<hr>
+		<p><b><h3>Internal CSS:</h3></b> Internal CSS is used to apply CSS on a single document or page. It can affect all the elements of the page. The internal style sheet is used to add a unique style for a single document. It is defined in &lt;head&gt; section of the HTML page inside the &lt;style&gt; tag.</p>
+		<p><b>Example:</b></p>
+			<div class="code">
+			<br>
+			&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>code {<br>&nbsp; font-family: 
+		    Consolas,&quot;courier new&quot;;<br>&nbsp; color: crimson;<br>&nbsp; 
+		    background-color: #f1f1f1;<br>&nbsp; padding: 2px;<br>&nbsp; font-size: 
+		    105%;<br>}<br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;The HTML 
+		    &lt;code&gt;button&lt;/code&gt; tag defines a clickable button.&lt;/p&gt;<br>&lt;p&gt;The CSS 
+		    &lt;code&gt;background-color&lt;/code&gt; property defines the background color of an 
+		    element.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br>
+			<br>
+			</div>
+		<hr>
+		<p><b><h3>External CSS:</h3></b> The external style sheet is generally used when you want to make changes on multiple pages. It is ideal for this condition because it facilitates you to change the look of the entire web site by changing just one file.Here, we write all the CSS code in a css file. Its extension must be .css for example style.css .It uses the &lt;link&gt; tag on every pages and the &lt;link&gt; tag should be put inside the head section.</p>
+		<p><b>Example:</b></p>
+		    <p></p>
+			<div class="code">
+			<br>
+			&lt;head&gt;<br>&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br>&lt;/head&gt;<br>
+			<br>
+			</div>
+			<p>The external style sheet may be written in any text editor but must be saved with a .css extension. This file should not contain HTML elements.</p>
+		    <p>Let's take an example of a style sheet file named "mystyle.css".</p>
+			<p><i>File: mystyle.css</i></p>
+			<div class="code">
+			<br>
+			body {&nbsp; background-color: lightblue;<br>}  
+		    <br>
+			<br>
+			h1 {<br>&nbsp; font-family: 
+		    Consolas,&quot;courier new&quot;;<br>&nbsp; color: crimson;<br>&nbsp; 
+		    background-color: #f1f1f1;<br>&nbsp; padding: 2px;<br>&nbsp; font-size: 
+		    105%;<br>}
+			<br>
+			<br>
+			bg1 {<br>&nbsp; font-family:&quot;ariel&quot;;<br>&nbsp; color: blue;<br>&nbsp; 
+		    background-color: #f1f4f6;<br>&nbsp; padding: 2px;<br>&nbsp; font-size: 
+		    105%;<br><br>&nbsp; left-margin-left: 
+		    15px;<br>}
+			<br>
+			<br>
+			</div>
+			</div>
+			</div>
+			<hr>
+			<hr>
+			<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+
+	<div style="height: 100px;"></div>
+
+	<div id = "three">
+	    <h2>CSS BACKGROUND PROPERTIES</h2>
+		<p style="margin-right:150px;">The CSS background properties are used to define the background effects 
+		for elements.</p>
+		<p>These are the CSS background properties:</p>
+		<ul>
+		  <li>background-color</li>
+		  <li>background-image</li>
+		  <li>background-repeat</li>
+		</ul>
+		<hr>
+
+		<h3>CSS background-color</h3>
+		<p>The <code> background-color</code> property specifies the background color of an element.</p>
+		<div >
+		<h4>Example</h4>
+		  <p>The background color of a page is set like this:</p>
+		<div class = "code">
+		<br>
+		body {<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br>
+		</div>
+		</div>
+		<p>With CSS, a color is most often specified by:</p>
+		<ul>
+		<li>a valid color name - like &quot;red&quot;</li>
+		<li>a HEX value - like &quot;#ff0000&quot;</li>
+		<li>an RGB value - like &quot;rgb(255,0,0)&quot;</li>
+		</ul>
+		<p>Look at <a href="/cssref/css_colors_legal.asp" target = "_blank">CSS Color Values</a> for a complete 
+		list of possible color values.</p>
+
+		<h3>Other Elements</h3>
+		<p>You can set the background color for any HTML elements:</p>
+		<div >
+		<h4>Example</h4>
+		<p>Here, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements will have different background colors:&nbsp;</p>
+		<div class="code">
+		<br>
+		h1 {<br>&nbsp;&nbsp;background-color: green;<br>}<br><br>
+		div {<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br><br>p {<br>&nbsp;&nbsp;background-color: 
+		yellow;<br>}<br><br></div>
+		</div>
+
+		<h3>Opacity / Transparency</h3>
+		<p>The <code>opacity</code> property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+
+		<div>
+			<h4><b>Example</b></h4>
+			<div class="code">
+			<br>
+			div1 {<br>&nbsp; background-color: green;<br>&nbsp;&nbsp;opacity: 1;<br>}<br>
+			div2 {<br>&nbsp; background-color: green;<br>&nbsp;&nbsp;opacity: 0.6;<br>}<br>
+			div3 {<br>&nbsp; background-color: green;<br>&nbsp;&nbsp;opacity: 0.3;<br>}<br>
+			div4 {<br>&nbsp; background-color: green;<br>&nbsp;&nbsp;opacity: 0.1;<br>}<br><br><br></div>
+			<br>
+			<br>
+			<p><b>Output:</b></p>
+			<div>
+			<div style="margin-left: 50px;background-color:#4CAF50;opacity:1;padding:50px;color:black;width : 50em;"><p>opacity 1</p></div>
+			</div>
+
+			<div>
+			<div style="margin-left: 50px;background-color:#4CAF50;opacity:0.6;padding:50px;color:black;width : 50em;"><p>opacity 0.6</p></div>
+			</div>
+
+			<div >
+			<div style="margin-left: 50px;background-color:#4CAF50;opacity:0.3;padding:50px;color:black;width : 50em;"><p>opacity 0.3</p></div>
+			</div>
+
+			<div >
+			<div style="margin-left: 50px;background-color:#4CAF50;opacity:0.1;padding:50px;color:black; width : 50em;"><p>opacity 0.1</p></div>
+			</div>
+			
+
+			<p><strong>Note:</strong> When using the <code class="w3-codespan">opacity</code> property to add transparency to the background of an element, all of its child elements 
+			inherit the same transparency. This can make the text inside a fully transparent element hard to read.</p>
+
+			</div>
+			
+			<div>
+			<h3>CSS background-image</h3>
+			<p>The <code >background-image</code> property specifies an image to use as the background of an element.</p>
+			<p>By default, the image is repeated so it covers the entire element.</p>
+			<div >
+			<h3>Example</h3>
+			<p>The background image for a page can be set like this:&nbsp;</p>
+			<div class="code">
+			<br>
+			body {<br>&nbsp;&nbsp;background-image: url(&quot;paper.gif&quot;);<br>}<br><br></div>
+			</div>
+
+			<div >
+			  <p><b>Note:</b> When using a background image, use an image that does not disturb the text.</p>
+			</div>
+			<br>
+			<div>
+			<h3>CSS background-repeat</h3>
+			<p>The <code >background-repeat</code> property specifies number of time it can be repeated to use as the background of an element.</p>
+			<p>By default, the background-image property repeats an image both horizontally and vertically.</p>
+			<div >
+			<h4>Example</h4>
+			<p>To repeat an image horizontally:</p>
+			<div class="code">
+			<br>
+			body {<br>&nbsp;&nbsp;background-image: url(&quot;paper.gif&quot;);<br>&nbsp;&nbsp;background-repeat: repeat-x;<br>}<br><br></div>
+			</div>
+			<br>
+			<p>To repeat an image vertically:</p>
+			<div class="code">
+			<br>
+			body {<br>&nbsp;&nbsp;background-image: url(&quot;paper.gif&quot;);<br>&nbsp;&nbsp;background-repeat: repeat-y;<br>}<br><br></div>
+			</div>
+			<br>
+			<p>To repeat an image both horizontally and vertically:</p>
+			<div class="code">
+			<br>
+			body {<br>&nbsp;&nbsp;background-image: url(&quot;paper.gif&quot;);<br>&nbsp;&nbsp;background-repeat: repeat;<br>}<br><br></div>
+			</div>
+			<br>
+			<p>For no repetition:</p>
+			<div class="code">
+			<br>
+			body {<br>&nbsp;&nbsp;background-image: url(&quot;paper.gif&quot;);<br>&nbsp;&nbsp;background-repeat: no-repeat;<br>}<br><br>
+			</div>
+			<hr>
+			<hr>
+			<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>	
+	</div>
+	<div style="height: 100px;"></div>
+
+
+	<div id = "four">
+		<h2>CSS BORDER STYLES</h2>
+		<p>The <code>border-style</code> property specifies what kind of border to display.</p>
+		<p>The following values are allowed:</p>
+		<ul>
+		<li><code >dotted</code> - Defines a dotted border</li>
+		<li><code >dashed</code> - Defines a dashed border</li>
+		<li><code >solid</code> - Defines a solid border</li>
+		<li><code >double</code> - Defines a double border</li>
+		<li><code >groove</code> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+		<li><code >ridge</code> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+		<li><code >inset</code> - Defines a 3D inset border. The effect depends on the border-color value</li>
+		<li><code >outset</code> - Defines a 3D outset border. The effect depends on the border-color value</li>
+		<li><code >none</code> - Defines no border</li>
+		<li><code >hidden</code> - Defines a hidden border</li>
+		</ul>
+
+		<p>The <code >border-style</code> property can have from one to four values (for 
+		the top border, right border, bottom border, and the left border).</p>
+
+		<div >
+		<h4>Example</h4>
+		  <p>Demonstration of the different border styles:</p>
+		<div class="code">
+		<br>
+		p.dotted {border-style: dotted;}<br>p.dashed 
+		{border-style: dashed;}<br>p.solid {border-style: solid;}<br>p.double 
+		{border-style: double;}<br>p.groove {border-style: groove;}<br>p.ridge 
+		{border-style: ridge;}<br>p.inset {border-style: inset;}<br>p.outset 
+		{border-style: outset;}<br>p.none {border-style: none;}<br>p.hidden {border-style: hidden;}<br>
+		p.mix {border-style: dotted dashed solid double;}<br>
+		<br><br></div>
+		<p>Output:</p>
+		<div >
+		<p style="border-style: dotted;padding:2px 4px;">A dotted border.</p>
+		<p style="border-style: dashed;padding:2px 4px;">A dashed border.</p>
+		<p style="border-style: solid;padding:2px 4px;">A solid border.</p>
+		<p style="border-style: double;padding:2px 4px;">A double border.</p>
+		<p style="border-style: groove;padding:2px 4px;">A groove border. The effect depends on the border-color value.</p>
+		<p style="border-style: ridge;padding:2px 4px;">A ridge border. The effect depends on the border-color value.</p>
+		<p style="border-style: inset;padding:2px 4px;">An inset border. The effect depends on the border-color value.</p>
+		<p style="border-style: outset;padding:2px 4px;">An outset border. The effect depends on the border-color value.</p>
+		<p style="border-style: none;padding:2px 4px;">No border.</p>
+		<p style="border-style: hidden;padding:2px 4px;">A hidden border.</p>
+		<p style="border-style: dotted dashed solid double;padding:2px 4px;">A mixed border.</p>
+		</div>
+		</div>
+		<hr>
+		<hr>
+		<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+	<div style="height: 100px;"></div>
+
+	<div id = "five">
+		<h2>CSS FONT FAMILIES</h2>
+		<p>In CSS, there are two types of font family names:</p>
+		<ul>
+		<li><b>generic family</b> - a group of font families with a 
+		similar look (like &quot;Serif&quot; or &quot;Monospace&quot;)</li>
+		<li><b>font family</b> - a specific font family (like &quot;Times New Roman&quot; 
+		or &quot;Arial&quot;)</li>
+		</ul>
+		<table border = "1" bgcolor=#D3D3D3>
+		<tr>
+		<th style="width:20%">Generic family</th>
+		<th style="width:30%">Font family</th>
+		<th>Description</th>
+		</tr>
+		<tr>
+		<td>Serif</td>
+		<td><span style="font-size:150%;font-family:Times New Roman">Times New Roman</span><br>
+		<span style="font-size:150%;font-family:Georgia">Georgia</span></td>
+		<td>Serif fonts have small lines at the ends on some characters</td>
+		</tr>
+		<tr>
+		<td>Sans-serif</td>
+		<td><span style="font-size:150%;font-family:Arial">Arial</span><br>
+		<span style="font-size:150%;font-family:Verdana">Verdana</span></td>
+		<td>&quot;Sans&quot; means without - these fonts do not have the 
+		lines at the ends of characters</td>
+		</tr>
+		<tr>
+		<td>Monospace</td>
+		<td><span style="font-size:150%;font-family:Courier New">Courier New</span><br>
+		<span style="font-size:150%;font-family:Lucida Console">Lucida Console</span></td>
+		<td>All monospace characters have the same width</td>
+		</tr>
+		</table>
+		<div >
+		 <p><strong>Note:</strong> On computer screens, sans-serif fonts are considered easier to read than serif fonts.</p>
+		</div>
+		<hr>
+
+		<h2>FONT FAMILY</h2>
+		<p>The font family of a text is set with the <code >font-family</code> property.</p>
+		<p>The <code >font-family</code> property should hold several font names as a &quot;fallback&quot; system. 
+		If the browser does not support the first font, it tries the next font, and so 
+		on.</p>
+		<p>Start with the font you want, and end with a generic family, to let the 
+		browser pick a similar font in the generic family, if no other fonts are 
+		available. </p>
+		<div >
+		<p><b>Note</b>: If the name of a font family is more than one word, it must be in 
+		quotation marks, like: &quot;Times New Roman&quot;.</p>
+		</div>
+		<p>More than one font family is specified in a comma-separated list:</p>
+		<div >
+		<h4><b>Example</b></h4>
+		<p>Specify the font for three paragraphs:</p>
+		<div class="code">
+		   <br>
+		  .serif {<br>&nbsp; font-family: &quot;Times New Roman&quot;, Times, serif;<br>}<br><br>
+		  .sansserif {<br>&nbsp; font-family: Arial, Helvetica, sans-serif;<br>}<br><br>
+		  .monospace {<br>&nbsp; font-family: &quot;Lucida Console&quot;, Courier, monospace;<br>}
+		  <br><br></div>
+		</div>
+		<hr>
+		<hr>
+		<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+
+	<div style="height: 80px;"></div>
+
+	<div id="six">
+	<h2 >MARGIN PROPERTY</h2>
+	<p>CSS Margin property is used to define the space around elements. It is completely transparent and doesn't have any background color. It clears an area around the element.</p>
+	<p>We can also specify the margin properties in one line to shorten the code.</p><br>The margin properties are:<br>
+	<ul>
+	  <li>margin-left</li>
+	  <li>margin-right</li>
+	  <li>margin-top</li>
+	  <li>margin-bottom</li>
+	</ul>
+	<p><b>Example:</b></p>
+	<xmp class="code">
+
+	<style>  
+	 p.ex1 {  
+	    margin-top: 50px;
+	     margin-bottom: 50px;
+	     margin-right: 100px; 
+	    margin-left: 100px;
+	    background-color: #ff8080;   
+	}
+	p.ex2 {  
+	    margin: 50px 100px 150px 200px; 
+	    background-color: #ff8080;   
+	}  
+	</style>  
+	 <body>  
+	<p class="ex1">This paragraph is displayed with specified margin.</p> 
+	<p class="ex2">This paragraph is styled using shorthand margin properties.</p>  
+	</body>  
+	 </xmp>
+	<h2 ><b>Output:</b></h2>
+	<p style="margin-top: 50px;margin-bottom: 50px;margin-right: 100px; margin-left: 100px;background-color:#ff8080; ">This paragraph is displayed with specified margin.</p> 
+	<p style="margin: 50px 100px 150px 200px;background-color: #ff8080;">This paragraph is styled using shorthand margin properties.</p>
+	<hr>
+	<hr>
+	<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a> 
+	</div>
+	<div style="height: 100px;"></div>
+
+	<div id="seven">
+	<h2>TEXT DECORATION</h2>
+	 <p>It is a CSS property that decorates the content of the text. It adds lines under, above, and through the text. It sets the appearance of decorative lines on text. This CSS property decorates the text with several kinds of lines.</p>
+	 <p><b>1.Text decoration-line</b></p>
+	 <p>It sets the kind of text-decoration like overline, underline, or line-through. It can be used to add a combination of lines to the selected text.</p>
+	 <p><b>Example:</b></p>
+	 <xmp class="code">
+	 	<style>   
+	        #p1 {   
+	            text-decoration: underline;
+	            font-size: 25px;   
+	        }   
+	        #p2 {   
+	            text-decoration: line-through;
+	            font-size: 25px;   
+	        }   
+	        #p3 {   
+	            text-decoration: overline;
+	            font-size: 25px;   
+	          }
+	</style>   
+	<body>   
+	    <p class="p1">This is underline</p>   
+	    <p class="p2">This is line-through</p>   
+	    <p class="p3">This is overline</p>   
+	</body>   
+	 </xmp>
+	<p><b>Output:</b></p>
+	<p style="text-decoration: underline;font-size: 25px ">This is underline</p>   
+	    <p style="text-decoration: line-through;font-size: 25px " >This is line-through</p>   
+	    <p style="text-decoration: overline;font-size: 25px ">This is overline</p> 
+	<p><b>2.Text decoration-style</b></p>
+	<p>This property is used to set the style of the line. Its values are solid, dotted, wavy, double, and dashed.</p>
+	<p><b>Example:</b></p>
+	 <xmp class="code">
+	 	<style>   
+	        #p1 {   
+	            text-decoration: underline double;
+	             font-size: 25px;
+	             color:black;  
+	        }   
+	        #p2 {   
+	            text-decoration: line-through dashed;
+	            font-size: 25px;
+	            color:brown;   
+	        }   
+	        #p3 {   
+	            text-decoration: dotted overline;
+	            color:blue;
+	            font-size: 25px;   
+	        }   
+	        #p4 {   
+	            text-decoration: lightblue wavy overline underline line-through;
+	            font-size: 25px;  
+	            color:red;  
+	        }   
+	    </style>   
+	<body>   
+	        <p id="p1">This is double underline</p>   
+	        <p id="p2">This is dashed line-through</p>   
+	        <p id="p3">This is dotted overline</p>   
+	        <p id="p4">This is the wavy combination of lines</p>   
+	</body>   
+	 </xmp>
+	 <p><b>Output:</b></p>
+	 <p style="text-decoration: underline double;font-size: 25px;color:black;">This is double underline</p>   <p style="text-decoration: line-through dashed;font-size: 25px;color:brown;" >This is dashed line-through</p>   
+	   <p style="text-decoration: dotted overline;font-size: 25px;color:blue;">This is dotted overline</p> <p style="text-decoration: lightblue wavy overline underline line-through;font-size: 25px;color:red;">This is the wavy combination of lines</p>
+	<hr>
+	<hr>
+	<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+	<div style="height: 100px;"></div>
+
+
+	<div id="eight">
+	<h2>PADDING</h2>
+	<p>CSS Padding property is used to define the space between the element content and the element border.<br>Top, bottom, left and right padding can be changed independently using separate properties. You can also change all properties at once by using shorthand padding property.</p>
+	<p>Various padding properties are:</p>
+	<style>
+	table, th, td {
+	  border: 3px solid black;
+	  border-collapse: collapse;
+	}
+	th, td {
+	  padding: 5px;
+	  text-align: left;
+	}
+	</style>
+	</head>
+	<body>
+
+	<table style="width:50%;background-color: #ccccb3;">
+	  
+	  <tr>
+	    <th>PROPERTY</th>
+	    <th>DESCRIPTION</th>
+	  </tr>
+	  <tr>
+	    <td>Padding</td>
+	    <td>It is used to set all the padding properties in one declaration.</td>
+	  </tr>
+	  <tr>
+	    <td>Padding-left</td>
+	    <td>It is used to set left padding of an element.</td>
+	  </tr>
+	  <tr>
+	    <td>Padding-right</td>
+	    <td>It is used to set right padding of an element.</td>
+	  </tr>
+	  <tr>
+	    <td>Padding-top</td>
+	    <td>It is used to set top padding of an element.</td>
+	  </tr>
+	  <tr>
+	    <td>Padding-bottom</td>
+	    <td>It is used to set bottom padding of an element.</td>
+	  </tr>
+	</table>
+	</body>
+	<p><b>Example:</b></p>
+	 <xmp class="code">
+	 	 <style>  
+	 p.padding {  
+	    padding-top: 50px;  
+	    padding-right: 100px;  
+	    padding-bottom: 150px;  
+	    padding-left: 500px;
+	    background-color: #ffff80;
+	      
+	}  
+	</style>  
+	</head>  
+	<body>  
+	<p style="background-color: #ffff80;">This is a paragraph with no specified padding.</p>  
+	<p class="padding">This is a paragraph with specified paddings.</p>  
+	</body>  
+	</html>  
+	 </xmp>
+	 <p><b>Output:</b></p>
+	 <p style="background-color: #ffff80;">This is a paragraph with no specified padding.</p>  
+	<p style="padding-top: 50px;padding-right: 100px;padding-bottom: 150px;padding-left: 500px;background-color: #ffff80;">This is a paragraph with specified paddings.</p>
+	<hr>
+	<hr>
+	<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+
+	<div style="height: 80px;"></div>
+
+	<div id="nine">
+		<h2>CSS IMPORTANT</h2>
+		<p>This property in CSS is used to give more importance compare to normal property. The !important means 'this is important'. This rule provides a way of making the Cascade in CSS.<br>
+	If we apply this property to the text, then the priority of that text is higher than other priorities. It is to be recommended not to use this CSS property into your program until it is highly required. It is because the more use of this property will cause a lot of unexpected behavior.</p>
+	<p><b>Example:</b></p>
+	 <xmp class="code">
+	 	<style>
+	   h1.foo1 {
+	  border-color: red !important; 
+	  border: 5px green solid;
+	  border-color: black;
+	  width:50%;
+	}
+	h2.foo2{
+	   color: green !important;
+	   color: red;
+	   border-color:violet !important;
+	   border: 5px green solid;
+	    width:50%;
+	}
+	</style>
+	</head>
+	<body>
+	<h1 class="foo1">Hello World :) :)</h1>
+	<h2 class="foo2">Welcome to the CSS Tutorial</h2>
+	</body>
+	</xmp>
+	<p><b>Output:</b></p>
+	<h1 style="border-color: red !important;border: 5px green solid;border-color: black;width:50%;">Hello World :) :)</h1>
+	<h2 style="color: green !important;color: red;border-color:violet !important;border: 5px green solid;width:50%;" >Welcome to the CSS Tutorial</h2>
+	<hr>
+	<hr>
+	<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+	</div>
+
+	<div style="height: 100px;"></div>
+
+
+		<div id="ten">
+		<h2>CSS ICONS</h2>
+		<p>We can even add icons to our html page using CSS icons property.</p>
+		<p>The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.
+		Add the name of the specified icon class to any inline HTML element (like <i></i> or <span></span>).</p>
+
+		<p><b>Example:</b></p>
+		 <xmp class="code">
+		 	  
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		</head>
+		<body>
+
+		<i class="fas fa-cloud"></i>
+		<i class="fas fa-heart"></i>
+		<i class="fas fa-car"></i>
+		<i class="fas fa-file"></i>
+		<i class="fas fa-bars"></i>
+		<br>
+		<i class="material-icons">cloud</i>
+		<i class="material-icons">favorite</i>
+		<i class="material-icons">attachment</i>
+		<i class="material-icons">computer</i>
+		<i class="material-icons">traffic</i>
+		<br>
+		<i class="fas fa-cloud-30x"></i>
+		<i class="fas fa-refresh"></i>
+		<i class="fas fa-male"></i>
+		<i class="fas fa-file"></i>
+		<i class="fas fa-bars"></i>
+		</body>
+		</html>
+		</xmp>
+		<p><b>Output:</b></p>
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		</head>
+		<body>
+
+		<i class="fas fa-bars"></i>
+		<i class="fas fa-heart"></i>
+		<i class="fas fa-car"></i>
+		<i class="fas fa-file"></i>
+		<i class="fas fa-cloud"></i>
+		<br>
+		<i class="material-icons">cloud</i>
+		<i class="material-icons">favorite</i>
+		<i class="material-icons">attachment</i>
+		<i class="material-icons">computer</i>
+		<i class="material-icons">traffic</i>
+		<br>
+		<i class="fas fa-cloud"></i>
+		<i class="fas fa-refresh"></i>
+		<i class="fas fa-male"></i>
+		<i class="fas fa-file"></i>
+		<i class="fas fa-bars"></i>
+		</body>
+		</html>
+		<hr>
+		<hr>
+		<a href="#head" class="btn" style="width: 150px;margin: auto;">Back to Top</a>
+		</div>
+	<div style="height: 50px;"></div>
+	<div id="assign">
+		<h2 style="text-decoration:none;">ASSIGNMENT</h2>
+		<p>
+			<b>Build a personal portfolio webpage :-</b>
+			<div class="code">
+				<br>
+				You can use HTML and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Happy coding!
+				<br><br>
+				#1: My portfolio should have a welcome section with an id of welcome-section.
+				<br>
+				#2: The welcome section should have an h1 element that contains text.
+				<br>
+				#3: My portfolio should have a projects section with an id of projects.
+				<br>
+				#4: The projects section should contain at least one element with a class of project-tile to hold a project.
+				<br>
+				#5: The projects section should contain at least one link to a project.
+				<br>
+				#6: My portfolio should have a navbar with an id of navbar.
+				<br>
+				#7: The navbar should contain at least one link that I can click on to navigate to different sections of the page.
+				<br>
+				#8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab.
+				<br>
+				#9: My portfolio should have at least one media query.
+				<br>
+				#10: The height of the welcome section should be equal to the height of the viewport.
+				<br>
+				#11: The navbar should always be at the top of the viewport.
+			</div>
+		</p>
+		<hr>
+		<hr>
+	</div>
+	<div style="height: 50px;"></div>
+
+	<div id="quiz">
+		<h2>QUIZ</h2>
+		<p>TEST YOUR KNOWLEDGE!!</p>
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLScDLPWbNrsi41J8RuFzYQ8nIpTFny6CegcnNWwi7sWLTl4YFA/viewform">Click on this link to appear this quiz.</a>
+	</div>
+	<div style="height: 50px;"></div>
+	<hr>
+	<footer>
+		<div style="background-color: #2D3032; color: white; text-align: center;">
+			<br>
+			Copyright:-<br>
+			* Swastika Sarangi<br>
+			* Preeti Dey<br>
+			* Soumya Sinha
+			<br>
+			<br>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+	body
+
+	{   
+		
+		background-color: lightgrey;
+		padding: 0;
+		margin: 0 100px;
+
+	}
+	hr {
+	  border: 1px solid #2D3032;
+	}
+	.btn {
+	    display: block;
+	    height: 25px;
+	    background: #2D3032;
+	    padding: 10px;
+	    text-align: center;
+	    text-decoration: none; 
+	    border-radius: 5px;
+	    color: white;
+	    margin-bottom: 10px;
+	    line-height: 25px;
+	}
+	.code {
+	  padding: 15px 15px 15px 25px;
+	  display : block;
+	  font-family: Arial;
+	  color: blue;
+	  margin-left : 30px;
+	  background-color :white;
+	  padding: 20px 40px;
+	  justify-content: center;
+	  margin-right: 20em;
+	  border: 1px solid white;
+	  box-shadow: 5px 10px 18px #888888;
+	}
+	footer{
+		padding: 0;
+	}
