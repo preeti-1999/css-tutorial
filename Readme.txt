@@ -1,0 +1,1 @@
+I have gone through your css tutorial. Some more topics can be added, for eg - dimensions, scrollbars, labels etcs.And one more thing you can add is an editor so that the codes can be practiced there itself.
